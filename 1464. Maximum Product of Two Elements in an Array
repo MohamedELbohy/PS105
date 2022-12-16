@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+    int fstmax =0;
+    int secmax=1;
+    for( int i =1 ;i <nums.size();i++){
+        if( nums[i]>nums[fstmax] ){
+        secmax=fstmax;
+        fstmax=i;
+        }
+        else if(nums[i]>nums[secmax])
+        secmax=i;
+           
+           
+            }
+            return--nums[fstmax]*--nums[secmax];
+
+
+
+
+
+
+
+
+    }
+};
